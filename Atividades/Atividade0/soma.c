@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Multiplicação por recursão de cauda
+//Soma por recursão de cauda
 int somaRC(int a, int b, int ac){
     if(b==0){
         return ac;
@@ -13,7 +13,7 @@ int somaRC(int a, int b, int ac){
     }
 }
 
-//Multiplicaçãoo por iteração a partir da recursão em cauda
+//Soma por iteração a partir da recursão em cauda
 int somaIT(int a, int b, int ac){
     if(b>=0){
         while(b>0){
