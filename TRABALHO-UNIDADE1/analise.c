@@ -5,11 +5,12 @@
 
 int main(){
     int n;
-    int v[n];
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
 
-    printf("Digite o vetor de taamnho n: \n");
+    int v[n];
+
+    printf("Digite o vetor de tamanho n(%d): \n", n);
     for(int i = 0; i < n; i++){
         scanf("%d", &v[i]);
     }
