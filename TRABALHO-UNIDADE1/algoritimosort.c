@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "algoritimosort"
+#include "algoritimosort.h"
 
 void bubble_sort(int v[], int n){
     int i, temp;
