@@ -14,7 +14,7 @@ void teste_tempo(int v[]){
     srand(time(NULL));
     long int tamanhos[15];
     int n = 15;
-    long int min = 10000, max = 1000000;
+    long int min = 10000, max = 100000;
     clock_t s1, s2, s3, s4, s5, e1, e2, e3, e4, e5;
     double ttk1, ttk2, ttk3, ttk4, ttk5;
 
@@ -81,9 +81,6 @@ void teste_tempo(int v[]){
         ttk5 = ((double)e5 - s5) / CLOCKS_PER_SEC;
         quicks[i].n = n_testes;
         quicks[i].tempo = ttk5;
-
-
-
 
     }
     free(v_copia1);
