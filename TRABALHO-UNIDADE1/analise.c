@@ -11,7 +11,7 @@ int main(){
 
     clock_t start, end;
     double time_taken;
-
+    
     int n, opcao;
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
@@ -41,6 +41,7 @@ int main(){
 
             end = clock();
             time_taken = ((double)end - start) / CLOCKS_PER_SEC;
+
             printf("Tempo de execucao: %.10f segundos, para encontra a chave: %d\n", time_taken/repeticoes, chave);
             break;
         }
