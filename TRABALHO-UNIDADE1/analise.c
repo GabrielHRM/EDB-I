@@ -1,6 +1,7 @@
-#include <stdio.h>
+#include "teste_empirico.h"
 #include "algoritimosdebusca.h"
 #include "algoritimosort.h"
+#include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 
