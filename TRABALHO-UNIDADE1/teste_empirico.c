@@ -10,7 +10,7 @@ typedef struct{
     double tempo;
 }Resultado;
 
-void teste_tempo(int v[]){
+void teste_tempo(int *v){
     srand(time(NULL));
     long int tamanhos[15];
     int n = 15;
