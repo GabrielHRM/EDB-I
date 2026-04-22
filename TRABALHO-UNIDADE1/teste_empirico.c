@@ -83,6 +83,29 @@ void teste_tempo(int *v){
         quicks[i].tempo = ttk5;
 
     }
+    
+    // --- CÓDIGO PARA CRIAR O ARQUIVO CSV ---
+    FILE *arq = fopen("resultados.csv", "w"); // Cria ou sobrescreve o arquivo
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo para escrita!\n");
+        return;
+    }
+
+    // Cabeçalho (Primeira linha do Excel/Gnuplot)
+    fprintf(arq, "N;BuscaSeq;BuscaBin;Bubble;Merge;Quick\n");
+
+    // Loop para gravar cada um dos 15 resultados salvos nas suas structs
+    for(int i = 0; i < n; i++) {
+        fprintf(arq, "%d;%.6f;%.6f;%.6f;%.6f;%.6f\n", 
+                buscasequencial[i].n, 
+                buscasequencial[i].tempo, 
+                buscabinaria[i].tempo, 
+                bubbles[i].tempo, 
+                merges[i].tempo, 
+                quicks[i].tempo);
+    }
+
+    fclose(arq);
     free(v_copia1);
     free(v_copia2);
     free(v_copia3);

@@ -11,6 +11,8 @@ int main(){
 
     teste_tempo(v);
 
+    gerar_grafico_gnuplot();
+
     free(v);
     
     return 0;
