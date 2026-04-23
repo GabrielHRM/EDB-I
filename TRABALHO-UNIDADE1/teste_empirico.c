@@ -12,8 +12,8 @@ typedef struct{
 
 void teste_tempo(int *v){
     srand(time(NULL));
-    long int tamanhos[15];
-    int n = 15;
+    long int tamanhos[30];
+    int n = 30;
     long int min = 10000, max = 100000;
     clock_t s1, s2, s3, s4, s5, e1, e2, e3, e4, e5;
     double ttk1, ttk2, ttk3, ttk4, ttk5;
@@ -30,6 +30,8 @@ void teste_tempo(int *v){
 
     long incremento = (max - min) / (n - 1);
 
+    int chaves_de_teste[100000];
+
     for(int i = 0; i < n; i++){
         tamanhos[i] = min + (i * incremento);
     }
@@ -38,16 +40,20 @@ void teste_tempo(int *v){
         int n_testes = tamanhos[i];
 
         for(int j = 0; j < n_testes; j++){
-            v[j] = rand() % 100000;
+            v[j] = (rand() * rand()) % 100000;
             v_copia1[j] = v[j];
             v_copia2[j] = v[j];
             v_copia3[j] = v[j];
         }
 
-        int chave = v[rand() % n_testes];
+        for(int k = 0; k < 100000; k++){
+            chaves_de_teste[k] = v[(rand() * rand()) % n_testes];
+        }
 
         s1 = clock();
-        busca_sequencial(v, n_testes, chave);
+        for(int k = 0; k < 100000; k++){
+            busca_sequencial(v, n_testes, chaves_de_teste[k]);
+        }
         e1 = clock();
         ttk1 = ((double)e1 - s1) / CLOCKS_PER_SEC;
         buscasequencial[i].n = n_testes;
@@ -55,7 +61,9 @@ void teste_tempo(int *v){
 
         bubble_sort(v, n_testes);
         s2 = clock();
-        busca_binaria(v, n_testes, chave);
+        for(int k = 0; k < 100000; k++){
+            busca_binaria(v, n_testes, chaves_de_teste[k]);
+        }
         e2 = clock();
         ttk2 = ((double)e2 - s2) / CLOCKS_PER_SEC;
         buscabinaria[i].n = n_testes;
@@ -83,7 +91,7 @@ void teste_tempo(int *v){
         quicks[i].tempo = ttk5;
 
     }
-    
+
     // --- CÓDIGO PARA CRIAR O ARQUIVO CSV ---
     FILE *arq = fopen("resultados.csv", "w"); // Cria ou sobrescreve o arquivo
     if (arq == NULL) {
@@ -96,7 +104,7 @@ void teste_tempo(int *v){
 
     // Loop para gravar cada um dos 15 resultados salvos nas suas structs
     for(int i = 0; i < n; i++) {
-        fprintf(arq, "%d;%.6f;%.6f;%.6f;%.6f;%.6f\n", 
+        fprintf(arq, "%d;%.15f;%.15f;%.15f;%.15f;%.15f\n", 
                 buscasequencial[i].n, 
                 buscasequencial[i].tempo, 
                 buscabinaria[i].tempo, 
