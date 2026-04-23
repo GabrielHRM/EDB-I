@@ -90,7 +90,9 @@ void teste_tempo(int *v){
         e1 = clock();
         ttk1 = ((double)e1 - s1) / CLOCKS_PER_SEC;
         buscasequencial[i].n = n_testes;
-        buscasequencial[i].tempo = ttk1;
+        /*Média das 100000 execuções dentro da iteração atual 
+        para se ter uma execução temporal mais precisa nA busca binaria*/
+        buscasequencial[i].tempo = ttk1/100000;
         /*-----------------------------*/
 
         /*-------Busca Binaria-------*/
@@ -104,7 +106,9 @@ void teste_tempo(int *v){
         e2 = clock();
         ttk2 = ((double)e2 - s2) / CLOCKS_PER_SEC;
         buscabinaria[i].n = n_testes;
-        buscabinaria[i].tempo = ttk2;
+        /*Média das 100000 execuções dentro da iteração atual 
+        para se ter uma execução temporal mais precisa nA busca binaria*/
+        buscabinaria[i].tempo = ttk2/100000;
         /*---------------------------*/
 
         /*-------Bubble Sort-------*/
