@@ -12,8 +12,8 @@ typedef struct{
 
 void teste_tempo(int *v){
     srand(time(NULL));
-    long int tamanhos[30];
-    int n = 30;
+    long int tamanhos[60];
+    int n = 60;
     long int min = 10000, max = 100000;
     clock_t s1, s2, s3, s4, s5, e1, e2, e3, e4, e5;
     double ttk1, ttk2, ttk3, ttk4, ttk5;
