@@ -26,6 +26,7 @@ void teste_tempo(int *v){
     srand(time(NULL));
     //Vetor para arazenar os tamanhos dos vetores que irão conter os dados a sere analisados
     long int tamanhos[40];
+    //Número de tamanhos dos vetores
     int n = 40;
     //Valor minimo e maximo para calculo de incremento progressivo dos tamanhos dos vetores de dados
     long int min = 10000, max = 200000;
