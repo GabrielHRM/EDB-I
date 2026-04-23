@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <windows.h>
 
 typedef struct{
     int n;
@@ -11,10 +12,11 @@ typedef struct{
 }Resultado;
 
 void teste_tempo(int *v){
+    SetPriorityClass(GetCurrentProcess(), REALTIME_PRIORITY_CLASS);
     srand(time(NULL));
     long int tamanhos[60];
     int n = 60;
-    long int min = 10000, max = 100000;
+    long int min = 10000, max = 200000;
     clock_t s1, s2, s3, s4, s5, e1, e2, e3, e4, e5;
     double ttk1, ttk2, ttk3, ttk4, ttk5;
 

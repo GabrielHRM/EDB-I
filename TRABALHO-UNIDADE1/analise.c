@@ -8,7 +8,7 @@
 
 
 int main(){
-    int *v = (int *)malloc(100000 * sizeof(int));
+    int *v = (int *)malloc(200000 * sizeof(int));
 
     teste_tempo(v);
 
