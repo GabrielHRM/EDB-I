@@ -890,3 +890,175 @@ correlation matrix of the fit parameters:
 a_bub           1.000 
 b_bub          -0.973  1.000 
 c_bub           0.800 -0.901  1.000 
+
+
+*******************************************************************************
+Thu Apr 23 16:53:37 2026
+
+
+FIT:    data read from 'C:/Users/gabriel/Documents/GitHub/EDB-I/TRABALHO-UNIDADE1/resultados.csv' using 1:($3*10)
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_bin(x)
+	f_bin(x) = a_bin * log(x) + b_bin
+fitted parameters initialized with current variable values
+
+   5 1.0877635727e-03  -1.54e-03  8.07e-05    8.201449e-03   1.694210e-03
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.00108776
+rel. change during last iteration : -1.54115e-08
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00535027
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.86254e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_bin           = 0.00820145       +/- 0.001129     (13.77%)
+b_bin           = 0.00169421       +/- 0.01284      (758%)
+
+correlation matrix of the fit parameters:
+                a_bin  b_bin  
+a_bin           1.000 
+b_bin          -0.998  1.000 
+
+
+*******************************************************************************
+Thu Apr 23 16:53:37 2026
+
+
+FIT:    data read from 'C:/Users/gabriel/Documents/GitHub/EDB-I/TRABALHO-UNIDADE1/resultados.csv' using 1:($2*10)
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_seq(x)
+	f_seq(x) = a_seq * x + b_seq
+fitted parameters initialized with current variable values
+
+   8 4.7094380347e+01  -4.81e-04  8.42e-04    1.219791e-04   4.067831e+00
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 47.0944
+rel. change during last iteration : -4.80834e-09
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.11325
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.23933
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_seq           = 0.000121979      +/- 3.13e-06     (2.566%)
+b_seq           = 4.06783          +/- 0.3728       (9.165%)
+
+correlation matrix of the fit parameters:
+                a_seq  b_seq  
+a_seq           1.000 
+b_seq          -0.882  1.000 
+
+
+*******************************************************************************
+Thu Apr 23 16:53:37 2026
+
+
+FIT:    data read from 'C:/Users/gabriel/Documents/GitHub/EDB-I/TRABALHO-UNIDADE1/resultados.csv' using 1:5
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_merge(x)
+	f_merge(x) = a_mer * x * log(x) + b_mer
+fitted parameters initialized with current variable values
+
+  10 8.5354877176e-07  -9.03e-07  1.00e-04    9.432765e-09   8.881440e-05
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 8.53549e-07
+rel. change during last iteration : -9.02607e-12
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000149873
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.24618e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_mer           = 9.43277e-09      +/- 3.384e-11    (0.3588%)
+b_mer           = 8.88144e-05      +/- 4.792e-05    (53.95%)
+
+correlation matrix of the fit parameters:
+                a_mer  b_mer  
+a_mer           1.000 
+b_mer          -0.869  1.000 
+
+
+*******************************************************************************
+Thu Apr 23 16:53:37 2026
+
+
+FIT:    data read from 'C:/Users/gabriel/Documents/GitHub/EDB-I/TRABALHO-UNIDADE1/resultados.csv' using 1:6
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_quick(x)
+	f_quick(x) = a_qui * x * log(x) + b_qui
+fitted parameters initialized with current variable values
+
+  10 1.7262655485e-06  -4.46e-07  1.00e-04    7.077906e-09   2.693854e-04
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 1.72627e-06
+rel. change during last iteration : -4.45998e-12
+
+degrees of freedom    (FIT_NDF)                        : 38
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000213139
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.5428e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_qui           = 7.07791e-09      +/- 4.813e-11    (0.6799%)
+b_qui           = 0.000269385      +/- 6.814e-05    (25.3%)
+
+correlation matrix of the fit parameters:
+                a_qui  b_qui  
+a_qui           1.000 
+b_qui          -0.869  1.000 
+
+
+*******************************************************************************
+Thu Apr 23 16:53:37 2026
+
+
+FIT:    data read from 'C:/Users/gabriel/Documents/GitHub/EDB-I/TRABALHO-UNIDADE1/resultados.csv' using 1:4
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_bub(x)
+	f_bub(x) = a_bub * x**2 + b_bub * x + c_bub
+fitted parameters initialized with current variable values
+
+  14 9.5442076623e-02  -4.04e-09  1.08e-04    1.726205e-09  -6.649267e-06  -1.889137e-02
+
+After 14 iterations the fit converged.
+final sum of squares of residuals : 0.0954421
+rel. change during last iteration : -4.04227e-14
+
+degrees of freedom    (FIT_NDF)                        : 37
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0507889
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00257952
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_bub           = 1.7262e-09       +/- 2.842e-12    (0.1647%)
+b_bub           = -6.64927e-06     +/- 6.137e-07    (9.229%)
+c_bub           = -0.0188914       +/- 0.02808      (148.6%)
+
+correlation matrix of the fit parameters:
+                a_bub  b_bub  c_bub  
+a_bub           1.000 
+b_bub          -0.973  1.000 
+c_bub           0.796 -0.898  1.000 

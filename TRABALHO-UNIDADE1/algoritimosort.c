@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "algoritimosort.h"
 
+/*-------Bubble Sort-------*/
 void bubble_sort(int v[], int n){
     int i, temp;
 
@@ -15,7 +16,10 @@ void bubble_sort(int v[], int n){
         }
     }
 }
+/*------------------------*/
 
+/*-------Merge Sort-------*/
+//Função de intercalação do merge sort
 void intercalar(int v[], int inicio1, int inicio2, int fim2){
     int fim1 = inicio2 - 1, i = inicio1, j = inicio2, k = 0;
 
@@ -51,7 +55,7 @@ void intercalar(int v[], int inicio1, int inicio2, int fim2){
     }
 }
 
-
+//Merge sort propriamente dito
 void mergeSort(int v[], int inicio, int fim) {
     if (inicio < fim) {
         int meio = (inicio + fim) / 2;
@@ -64,7 +68,10 @@ void mergeSort(int v[], int inicio, int fim) {
         intercalar(v, inicio, meio + 1, fim);
     }
 }
+/*------------------------*/
 
+
+/*-------Quick Sort-------*/
 // Função auxiliar para trocar dois elementos
 void trocar(int v[], int a, int b) {
     int temp = v[a];
@@ -72,7 +79,7 @@ void trocar(int v[], int a, int b) {
     v[b] = temp;
 }
 
-// Função Particionar baseada exatamente na sua lógica
+// Função Particionar baseada na lógica do slide da aula sobre quick sort
 int particionar(int v[], int esquerda, int direita) {
     int pivo = v[direita];
     int i = esquerda;

@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+/*Codigo padrão para criação de 5 gráficos diferentes 
+que serão salvos como arquivos de imagem dentro do diretorio*/
 void gerar_grafico_gnuplot() {
     FILE *gp = _popen("\"C:\\Program Files\\gnuplot\\bin\\gnuplot.exe\" -persistent", "w"); 
 

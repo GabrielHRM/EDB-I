@@ -8,6 +8,7 @@
 
 
 int main(){
+    //Vetor inicial original vazio
     int *v = (int *)malloc(200000 * sizeof(int));
 
     teste_tempo(v);
